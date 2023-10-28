@@ -16,6 +16,21 @@ export class CountriesServices {
         return this.http.get<Country[]>(`${this.apiUrl}/capital/${term}`)
         .pipe(
             catchError( ()=>of ([]) )
+            // Sirve para construir un observable de acuerdo al argumento que yo le mando
         );
+    }
+
+    searchCountry(term : string ) : Observable<Country[]>{
+        return this.http.get<Country[]>(`${this.apiUrl}/name/${term}`)
+        .pipe(
+            catchError ( () => of ([]))
+        )
+    }
+
+    searchRegion( term : string ): Observable<Country[]>{
+        return this.http.get<Country[]>(`${this.apiUrl}/region/${term}`)
+        .pipe(
+            catchError (()=> of ([]))
+        )
     }
 }
