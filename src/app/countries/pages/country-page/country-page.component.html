@@ -19,15 +19,27 @@
             <img [src]="country.flags.svg" [alt]="country.name.common" class="img-thumbnail">
         </div>
         <div class="col">
+            <h3>Informacion</h3>
             <ul class="list-group">
                 <li class="list-group-item">
                     <strong>Poblacion</strong> {{ country.population | number}}
                 </li>
-                <li>
+                <li class="list-group-item">
                     <strong>Codigo</strong> {{ country.cca3 }}
                 </li>
             </ul>
         </div>
     </div>
-    <strong>Poblacion</strong> {{ country.population | number}}
+
+    <div class="row mt-2">
+        <div class="col">
+            <h3>Traducciones</h3>
+            <div class="d-flex flex-wrap">
+                <span class="badge bg-primary m-1">{{ country.translations['bra'].common }}</span>
+                <span class="badge bg-primary m-1">{{ country.translations['esp'].common }}</span>
+                <span class="badge bg-primary m-1">{{ country.translations['bra'].common }}</span>
+                <span class="badge bg-primary m-1">{{ country.translations['bra'].common }}</span>
+            </div>
+        </div>
+    </div>
 </div>
