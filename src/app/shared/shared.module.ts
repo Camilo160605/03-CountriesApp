@@ -7,6 +7,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { RouterModule } from '@angular/router';
+import { LoadingSpinerComponent } from './components/loading-spiner/loading-spiner.component';
 
 
 
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
     AboutPageComponent,
     SidebarComponent,
     ContactPageComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    LoadingSpinerComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { RouterModule } from '@angular/router';
     HomePageComponent,
     AboutPageComponent,
     SidebarComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    LoadingSpinerComponent
   ]
 })
 export class SharedModule { }
