@@ -12,7 +12,8 @@ export class SearchBoxComponent implements OnInit, OnDestroy{
   private debounce : Subject<string> = new Subject<string>()
   // Declaramos el debounce como un observable que va a estar escuchando los cambios constantemente
   private debounceSuscribe? : Subscription;
-  
+  @Input()
+  public initialValue : string = '';
   @Input()
   public placeholder : string = '';
   @Output()  
